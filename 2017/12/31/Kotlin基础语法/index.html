@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kotlin基础语法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言：&amp;emsp;&amp;emsp;上海百联大宗内部员工培训系统是为了给内部员工提供一个高素质培训平台，也是百联研发部新技术实验平台。该系统前期采用的是Vertx作为系统框架，以Kotlin作为开发语言，以Vue作为前台框架。将来还会有更多的新技术应用于该平台。作为平台的开发人员，为了满足开发的需求，所以学习了Kotlin, 现将基本语法整理出来供大家学习，同时也便于日后查看。 空类型用法：as : 类">
+<meta name="keywords" content="Kotlin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础语法">
+<meta property="og:url" content="http://yoursite.com/2017/12/31/Kotlin基础语法/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言：&amp;emsp;&amp;emsp;上海百联大宗内部员工培训系统是为了给内部员工提供一个高素质培训平台，也是百联研发部新技术实验平台。该系统前期采用的是Vertx作为系统框架，以Kotlin作为开发语言，以Vue作为前台框架。将来还会有更多的新技术应用于该平台。作为平台的开发人员，为了满足开发的需求，所以学习了Kotlin, 现将基本语法整理出来供大家学习，同时也便于日后查看。 空类型用法：as : 类">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/3.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/4.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/5.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/6.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/7.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/8.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/9.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/10.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/11.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/12.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/13.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/14.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/15.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/16.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/17.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/18.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/19.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/20.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/21.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/22.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/23.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/24.png">
+<meta property="og:updated_time" content="2018-01-31T06:08:34.373Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础语法">
+<meta name="twitter:description" content="前言：&amp;emsp;&amp;emsp;上海百联大宗内部员工培训系统是为了给内部员工提供一个高素质培训平台，也是百联研发部新技术实验平台。该系统前期采用的是Vertx作为系统框架，以Kotlin作为开发语言，以Vue作为前台框架。将来还会有更多的新技术应用于该平台。作为平台的开发人员，为了满足开发的需求，所以学习了Kotlin, 现将基本语法整理出来供大家学习，同时也便于日后查看。 空类型用法：as : 类">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/31/Kotlin基础语法/Kotlin基础语法/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Kotlin基础语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/31/Kotlin基础语法/" class="article-date">
+  <time datetime="2017-12-31T05:39:32.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Kotlin基础语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>前言：</strong><br>&emsp;&emsp;上海百联大宗内部员工培训系统是为了给内部员工提供一个高素质培训平台，也是百联研发部新技术实验平台。该系统前期采用的是Vertx作为系统框架，以Kotlin作为开发语言，以Vue作为前台框架。将来还会有更多的新技术应用于该平台。作为平台的开发人员，为了满足开发的需求，所以学习了Kotlin, 现将基本语法整理出来供大家学习，同时也便于日后查看。</p>
+<h4 id="空类型用法："><a href="#空类型用法：" class="headerlink" title="空类型用法："></a>空类型用法：</h4><p><img src="Kotlin基础语法/1.png" alt="Kotlin"><br>as : 类型转换关键字/包别名<br>安全类型转换:<br>智能类型转换: </p>
+<h4 id="区间"><a href="#区间" class="headerlink" title="区间:"></a>区间:</h4><p><img src="Kotlin基础语法/2.png" alt="Kotlin"></p>
+<h4 id="数组的使用方法"><a href="#数组的使用方法" class="headerlink" title="数组的使用方法"></a>数组的使用方法</h4><p><img src="Kotlin基础语法/3.png" alt="Kotlin"></p>
+<h4 id="基本数据类型的数组"><a href="#基本数据类型的数组" class="headerlink" title="基本数据类型的数组"></a>基本数据类型的数组</h4><p><img src="Kotlin基础语法/4.png" alt="Kotlin"></p>
+<h4 id="常量与变量"><a href="#常量与变量" class="headerlink" title="常量与变量"></a>常量与变量</h4><p><img src="Kotlin基础语法/5.png" alt="Kotlin"></p>
+<h4 id="Lamd表达式"><a href="#Lamd表达式" class="headerlink" title="Lamd表达式"></a>Lamd表达式</h4><p><img src="Kotlin基础语法/6.png" alt="Kotlin"></p>
+<h4 id="Lamd表达式参数传递"><a href="#Lamd表达式参数传递" class="headerlink" title="Lamd表达式参数传递"></a>Lamd表达式参数传递</h4><p><img src="Kotlin基础语法/7.png" alt="Kotlin"></p>
+<h4 id="成员变量和局部变量的定义和区别："><a href="#成员变量和局部变量的定义和区别：" class="headerlink" title="成员变量和局部变量的定义和区别："></a>成员变量和局部变量的定义和区别：</h4><p>成员变量都是用val或var修饰的，而没有被这两个关键字修饰的变量都是局部变量<br><img src="Kotlin基础语法/8.png" alt="Kotlin"></p>
+<h4 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h4><p><img src="Kotlin基础语法/9.png" alt="Kotlin"></p>
+<h4 id="成员变量的访问控制"><a href="#成员变量的访问控制" class="headerlink" title="成员变量的访问控制"></a>成员变量的访问控制</h4><p><img src="Kotlin基础语法/10.png" alt="Kotlin"></p>
+<h4 id="运算符的定义"><a href="#运算符的定义" class="headerlink" title="运算符的定义"></a>运算符的定义</h4><p><img src="Kotlin基础语法/11.png" alt="Kotlin"></p>
+<h4 id="Kotlin关键字："><a href="#Kotlin关键字：" class="headerlink" title="Kotlin关键字："></a>Kotlin关键字：</h4><p><strong>operator:</strong>定义运算符<br><strong>infix:</strong>定义中缀表达式<br><strong>override:</strong>重写父类方法<br><strong>constructor:</strong>构造器<br><strong>const:</strong>定义编译期常量<br><strong>val:</strong>定义普通成员常量<br><strong>var:</strong>定义成员变量</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li><p>在Kotlin中when，if语句和Lamda表达式一样具有返回值，返回值为最后一行的值</p>
+</li>
+<li><p>在Kotlin中默认的类和方法都是final的，要继承重写必须用关键字open，或者设置成abstract类型，重写方法必须使用override关键字</p>
+</li>
+</ol>
+<h4 id="if表达式"><a href="#if表达式" class="headerlink" title="if表达式"></a>if表达式</h4><p><img src="Kotlin基础语法/12.png" alt="Kotlin"></p>
+<h4 id="when、continue-和-break"><a href="#when、continue-和-break" class="headerlink" title="when、continue 和 break"></a>when、continue 和 break</h4><p>when表达式，Java中switch的替代品, 循环关键字continue和break<br><img src="Kotlin基础语法/13.png" alt="Kotlin"></p>
+<h4 id="具名参数"><a href="#具名参数" class="headerlink" title="具名参数"></a>具名参数</h4><p><img src="Kotlin基础语法/14.png" alt="Kotlin"></p>
+<h4 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h4><p><img src="Kotlin基础语法/15.png" alt="Kotlin"></p>
+<h4 id="Sperat-Operator"><a href="#Sperat-Operator" class="headerlink" title="Sperat Operator"></a>Sperat Operator</h4><p><img src="Kotlin基础语法/16.png" alt="Kotlin"></p>
+<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p><img src="Kotlin基础语法/17.png" alt="Kotlin"></p>
+<h4 id="继承和实现"><a href="#继承和实现" class="headerlink" title="继承和实现"></a>继承和实现</h4><p><img src="Kotlin基础语法/18.png" alt="Kotlin"><br><img src="Kotlin基础语法/19.png" alt="Kotlin"><br><img src="Kotlin基础语法/20.png" alt="Kotlin"><br><img src="Kotlin基础语法/21.png" alt="Kotlin"></p>
+<h4 id="object"><a href="#object" class="headerlink" title="object"></a>object</h4><p><img src="Kotlin基础语法/22.png" alt="Kotlin"></p>
+<h4 id="静态方法的定义"><a href="#静态方法的定义" class="headerlink" title="静态方法的定义"></a>静态方法的定义</h4><p><img src="Kotlin基础语法/23.png" alt="Kotlin"><br><img src="Kotlin基础语法/24.png" alt="Kotlin"></p>
+<p><strong>方法签名：</strong>这是一个JVM概念，虚拟机根据方法签名来判断方法的唯一性，从而会存在方法的重载。方法返回值不属于方法签名</p>
+<p>lamd表达式是一种匿名函数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/31/Kotlin基础语法/" data-id="cjebf17dj0012203th3t2u2zx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kotlin/">Kotlin</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/31/Nginx简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Nginx简介
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/30/MySql触发器/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySql触发器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AOP/">AOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/">GIT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JQuery/">JQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSP/">JSP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaEE/">JavaEE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kotlin/">Kotlin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySql/">MySql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Schedule/">Schedule</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Servlet/">Servlet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Session/">Session</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Solr/">Solr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springmvc/">Springmvc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts2/">Struts2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swagger/">Swagger</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utilities/">Utilities</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WEB/">WEB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WINDOWS/">WINDOWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WorkFlow/">WorkFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zookeeper/">Zookeeper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaWEB/">javaWEB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试/">面试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AOP/" style="font-size: 10px;">AOP</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JQuery/" style="font-size: 10px;">JQuery</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/JSP/" style="font-size: 10px;">JSP</a> <a href="/tags/JavaEE/" style="font-size: 17.5px;">JavaEE</a> <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Kotlin/" style="font-size: 10px;">Kotlin</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/MySql/" style="font-size: 17.5px;">MySql</a> <a href="/tags/Mybatis/" style="font-size: 12.5px;">Mybatis</a> <a href="/tags/Nginx/" style="font-size: 12.5px;">Nginx</a> <a href="/tags/NoSQL/" style="font-size: 10px;">NoSQL</a> <a href="/tags/RPC/" style="font-size: 10px;">RPC</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Schedule/" style="font-size: 10px;">Schedule</a> <a href="/tags/Servlet/" style="font-size: 10px;">Servlet</a> <a href="/tags/Session/" style="font-size: 10px;">Session</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/Solr/" style="font-size: 10px;">Solr</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringBoot/" style="font-size: 10px;">SpringBoot</a> <a href="/tags/Springmvc/" style="font-size: 10px;">Springmvc</a> <a href="/tags/Struts2/" style="font-size: 15px;">Struts2</a> <a href="/tags/Swagger/" style="font-size: 10px;">Swagger</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a> <a href="/tags/Utilities/" style="font-size: 10px;">Utilities</a> <a href="/tags/WEB/" style="font-size: 10px;">WEB</a> <a href="/tags/WINDOWS/" style="font-size: 10px;">WINDOWS</a> <a href="/tags/WorkFlow/" style="font-size: 10px;">WorkFlow</a> <a href="/tags/XML/" style="font-size: 10px;">XML</a> <a href="/tags/Zookeeper/" style="font-size: 10px;">Zookeeper</a> <a href="/tags/javaWEB/" style="font-size: 10px;">javaWEB</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/01/Java面试知识点总结/">Java面试知识点总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/31/SpringBoot入门/">SpringBoot入门</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/31/支付宝支付功能/">支付宝支付功能</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/31/List集合切割的工具类/">List集合切割的工具类</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
